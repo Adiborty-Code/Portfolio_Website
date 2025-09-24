@@ -1,11 +1,12 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import base64
 
 st.set_page_config(page_title='Portfolio Website',page_icon='crazy profile photo.png',layout='wide')
 page_bg = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://wallpaperaccess.com/full/1124156.jpg");
+    background-image: url("https://cdn.wallpapersafari.com/2/4/BP9vUl.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -100,23 +101,9 @@ if selected=='Projects':
     with st.container():
         st.header("My Projects")
         st.write("###")
-        left_margin1,col6,middle_col,col7,right_margin1 = st.columns([0.2,1,0.2,2,0.2])
+        left_margin1,col6,col7,right_margin1 = st.columns([0.4,1,2,0.2])
         with col6:
-            st.markdown(
-            """
-            <style>
-            .responsive-img {
-            width: 58%;           
-            max-width: 400px;      
-            height: auto;         
-            display: block;
-            margin: 0 auto 30px;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-            )
-            st.markdown('<img src="https://static.wixstatic.com/media/5e79ca_dce5c923992f41fa81d8465041fe5163~mv2.png/v1/fill/w_109,h_107,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IDEAS-TIH%2C%20ISI%2C%20Kolkata.png" class="responsive-img">',unsafe_allow_html=True)
+            st.image("IDEAS-TIH, ISI, Kolkata.png",width=220)
         with col7:
             st.markdown("<h3 style='margin-bottom: -35px;'>Fake News Detection and Evaluation with Confusion Matrix</h3>",unsafe_allow_html=True)
             st.write("Associated with Foundational Autumn Internship - IDEAS-TIH @ ISI Kolkata")
@@ -165,7 +152,15 @@ if selected=='Contact':
     with left_col:
         st.markdown(contact_form,unsafe_allow_html=True)
     with right_col:
-        st.image("1732554444045.png",use_container_width=True)
+        with open("1732554444045.png", "rb") as f:
+            data = f.read()
+            b64_data = base64.b64encode(data).decode()
+
+# Use HTML img with base64
+        st.markdown(
+        f'<img src="data:image/png;base64,{b64_data}" style="width:80%; display:block; margin:0 auto 30px;">',
+        unsafe_allow_html=True
+        )
     st.write("---")
 if selected=='Links': 
     with st.container():
