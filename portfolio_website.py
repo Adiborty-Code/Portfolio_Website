@@ -50,10 +50,31 @@ if selected=='About':
             st.title("Aditya Chakraborty")
             st.subheader("Undergraduate Student at Indian Institute of Technology, Kharagpur")
             st.markdown("#### Exploring various different technologies")
-            st.markdown("[Linkedin](https://www.linkedin.com/in/adityachakrabortyiitkgp/)"+'     |     '+"[Instagram](https://www.instagram.com/adi_borty/?__pwa=1)"+'     |     '+"[Facebook](https://www.facebook.com/profile.php?id=61566906508902&ref=_ig_profile_ac)")
+            st.markdown(
+            """
+            <div style="display: flex; justify-content: flex-start; gap: 15px; margin-top: 20px;">
+                <a href="https://www.linkedin.com/in/adityachakrabortyiitkgp/" target="_blank">
+                    <button style="background-color:#0077B5;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        LinkedIn
+                    </button>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61566906508902&ref=_ig_profile_ac" target="_blank">
+                    <button style="background-color:#3b5998;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        Facebook
+                    </button>
+                </a>
+                <a href="https://x.com/AdityaChak45072" target="_blank">
+                    <button style="background-color:#000000;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        Twitter/X
+                    </button>
+                </a>
+            </div>
+            """,
+            unsafe_allow_html=True
+            )
         with col2:
             st.image('1732554444067.png',use_container_width=True)
-    
+    st.write("#####")   
     st.write("---")
 
     with st.container():
@@ -108,7 +129,17 @@ if selected=='Projects':
             st.markdown("<h3 style='margin-bottom: -35px;'>Fake News Detection and Evaluation with Confusion Matrix</h3>",unsafe_allow_html=True)
             st.write("Associated with Foundational Autumn Internship - IDEAS-TIH @ ISI Kolkata")
             st.write("Fake News Detection using Machine Learning (Logistic Regression & Random Forest). Includes preprocessing, EDA, vectorization with Word2Vec, model training, evaluation, and serialization. Repository contains Jupyter notebooks, datasets, pickle models, project report, and a demo video.")
-            st.markdown("[Visit GitHub Repository](https://github.com/Adiborty-Code/IDEAS-TIH-ISI-Kolkata-Project-Repo)")
+            st.markdown(
+            """
+            <div style="display: flex; justify-content: flex-start; gap: 15px;">
+                <a href="https://github.com/Adiborty-Code/IDEAS-TIH-ISI-Kolkata-Project-Repo" target="_blank">
+                    <button style="background-color:#008B8B;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        The GitHub Repo
+                    </button>
+                </a>
+            </div>
+            """
+            ,unsafe_allow_html=True)
         st.write("---")
 if selected=='Contact':
     st.header("Contact me via Email!")
@@ -155,8 +186,6 @@ if selected=='Contact':
         with open("1732554444045.png", "rb") as f:
             data = f.read()
             b64_data = base64.b64encode(data).decode()
-
-# Use HTML img with base64
         st.markdown(
         f'<img src="data:image/png;base64,{b64_data}" style="width:80%; display:block; margin:0 auto 30px;">',
         unsafe_allow_html=True
@@ -171,8 +200,18 @@ if selected=='Links':
             st.image('Github.png',width=220)
         with c2:
             st.markdown("<h3>GitHub</h3>",unsafe_allow_html=True)
-            st.write("All my GitHub repository projects and also upcoming ones on Artificial Intelligence and Machine Learning will be pushed here.")
-            st.markdown("[GitHub Profile](https://github.com/Adiborty-Code/)")
+            st.write("All my GitHub repository projects and also upcoming ones on AI and ML will be pushed here.")
+            st.markdown(
+            """
+            <div style="display: flex; justify-content: flex-start; gap: 15px;">
+                <a href="https://github.com/Adiborty-Code" target="_blank">
+                    <button style="background-color:#008B8B;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        GitHub Profile
+                    </button>
+                </a>
+            </div>
+            """
+            ,unsafe_allow_html=True)
         st.write("---")
         st.write("######")
         l2,c3,c4,r2 = st.columns([0.4,1,2,0.2])
@@ -181,7 +220,17 @@ if selected=='Links':
         with c4:
             st.markdown("<h3>Kaggle</h3>",unsafe_allow_html=True)
             st.write("My Kaggle Account for data science and machine learning notebooks.")
-            st.markdown("[Kaggle Profile](https://www.kaggle.com/adibortykaggle/competitions)")
+            st.markdown(
+            """
+            <div style="display: flex; justify-content: flex-start; gap: 15px;">
+                <a href="https://www.kaggle.com/adibortykaggle/competitions" target="_blank">
+                    <button style="background-color:#008B8B;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        Kaggle Profile
+                    </button>
+                </a>
+            </div>
+            """
+            ,unsafe_allow_html=True)
         st.write("---")
         st.write("######")
         l3,c5,c6,r3 = st.columns([0.4,1,2,0.2])
@@ -190,7 +239,17 @@ if selected=='Links':
         with c6:
             st.markdown("<h3>Leetcode</h3>",unsafe_allow_html=True)
             st.write("This is my personal LeetCode account, all the solved DSA questions here.")
-            st.markdown("[Leetcode Profile](https://leetcode.com/u/axXXo0mxnI/)")
+            st.markdown(
+            """
+            <div style="display: flex; justify-content: flex-start; gap: 15px;">
+                <a href="https://leetcode.com/u/axXXo0mxnI/" target="_blank">
+                    <button style="background-color:#008B8B;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        Leetcode Profile
+                    </button>
+                </a>
+            </div>
+            """
+            ,unsafe_allow_html=True)
         st.write("---")
         st.write("######")
         l4,c7,c8,r4 = st.columns([0.4,1,2,0.2])
@@ -199,7 +258,17 @@ if selected=='Links':
         with c8:
             st.markdown("<h3>CodeForces</h3>",unsafe_allow_html=True)
             st.write("This is my personal CodeForces account, all the solved DSA questions here.")
-            st.markdown("[Codeforces Profile](https://codeforces.com/profile/Adi_borty)")
+            st.markdown(
+            """
+            <div style="display: flex; justify-content: flex-start; gap: 15px;">
+                <a href="https://codeforces.com/profile/Adi_borty" target="_blank">
+                    <button style="background-color:#008B8B;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        Codeforces Dashboard
+                    </button>
+                </a>
+            </div>
+            """
+            ,unsafe_allow_html=True)
         st.write("---")
         st.write("######")
         l5,c9,c10,r5 = st.columns([0.4,1,2,0.2])
@@ -208,5 +277,15 @@ if selected=='Links':
         with c10:
             st.markdown("<h3>Design and Media Portfolio</h3>",unsafe_allow_html=True)
             st.write("This Google Drive folder has all the design and media projects in which I have worked on.")
-            st.markdown("[Drive Folder Link](https://drive.google.com/drive/u/3/folders/1Wwd7f9SY7Gj8pz8Jzv7Ifqk_bTld9YNf)")
+            st.markdown(
+            """
+            <div style="display: flex; justify-content: flex-start; gap: 15px;">
+                <a href="https://drive.google.com/drive/u/3/folders/1Wwd7f9SY7Gj8pz8Jzv7Ifqk_bTld9YNf" target="_blank">
+                    <button style="background-color:#008B8B;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;">
+                        Drive folder link
+                    </button>
+                </a>
+            </div>
+            """
+            ,unsafe_allow_html=True)
         st.write("---")

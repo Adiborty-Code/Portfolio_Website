@@ -5,7 +5,7 @@ Welcome to my personal portfolio website built using **Streamlit**! This project
 ---
 
 ## 🌐 Live Demo
-You can view the live portfolio here: [Your Streamlit App Link](https://your-username.streamlit.app)
+You can view the live portfolio here: [Chakratya-The Portfolio Website](https://chakratya.streamlit.app/)
 
 ---
 
